@@ -9,7 +9,7 @@
 if [ $# -ne 0 ]; then
     USERSFILE=$1
 else
-    echo "Using: delteaccount [file or path]"
+    echo "Using: $0 [file or path]"
     exit 1;
 fi
 
