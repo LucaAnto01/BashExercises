@@ -1,11 +1,13 @@
 #!/bin/bash
 #@author: Luca Antognarelli
 
+#this is an example of function
 hello_world () 
 {
     echo "hello, world $SALUTI"
 }
 
+#this is a function with a param
 hello_world_unico()
 {
     echo "hello $1"
