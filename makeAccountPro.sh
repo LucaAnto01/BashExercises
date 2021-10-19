@@ -31,9 +31,19 @@ for ENTRY in $(cat $FILEUTENTE); do
 
     #concatenate first and last name for create userName
     USERNAME=$USERFIRSTNAME$USERLASTNAME
+
+    if [ verbose -eq 'y' ]; then
+        echo "Wait for create user: $USERNAME"
+    fi
     
     #create a new account
-    useradd USERNAME -c "$USERFIRSTNAME $USERLASTNAME"
+    useradd USERNAME -c "$USERFIRSTNAME $USERLASTNAME" 2> /dev/null
+
+    if [ verbose -eq 'y' ] && [ $? -eq 0 ]; then
+        echo "$USERNAME user has been created"
+    else
+        echo "Impossible to create $USERNAME user"
+    fi
 
     #number of strings ending with :1
     #grep -c :1$
