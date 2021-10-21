@@ -26,9 +26,9 @@ for ENTRY in $(cat $USERSFILE); do
     userdel -r $USERNAME
 
     if [ $? -eq 0 ]; then
-        echo "Delte user $USERNAME"
+        echo "Delete user $USERNAME"
     else
-        echo "Impossible to delte user $USERNAME"
+        echo "Impossible to delete user $USERNAME"
     fi
 done
 
