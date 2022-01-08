@@ -35,10 +35,14 @@ file_dir=$1
 #check file exist
 checkFile $file_dir
 
+#get all directory to create
 directories=$(cat $file_dir)
 
+#start from this specifc path
 cd $starting_path
 
+#create new directories
 for new_dir in $directories; do
+    #check directory doesn't already exist
     checkDir $new_dir
 done
