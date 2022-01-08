@@ -3,6 +3,7 @@
 
 starting_path=/exam/exercise8/dircontainer/
 
+#Check params
 function check()
 {
     if [ $1 -ne 1 ]; then
@@ -11,6 +12,7 @@ function check()
     fi
 }
 
+#Check file input exist
 function checkFile()
 {
     if [[ ! -f "$1" ]]; then
@@ -19,6 +21,7 @@ function checkFile()
     fi
 }
 
+#Check dir doesn't already exist
 function checkDir()
 {
     if [[ ! -d "$1" ]]; then
